@@ -1,0 +1,86 @@
+---
+id: 20260325021423-217b
+title: "**Directives for System Architecture**"
+created: 2026-03-25
+type: atomic-concept
+status: permanent
+source: "[[source_document.md]]"
+confidence: high
+author: agentic-pipeline-v3
+tags: [assimilated, granular-memory, legal-standard]
+---
+
+# **Directives for System Architecture**
+
+* **Storage Location:** Obsidian must exclusively store plain-text Markdown, YAML metadata, and lightweight visual assets. Heavy binaries, massive unstructured datasets, and standalone vector databases should remain entirely external, interfacing with the vault via APIs or the Model Context Protocol.51  
+* **Transformation Boundaries:** Original source material must remain mathematically identical to its origin, stored securely in a designated sources directory. Only derived, synthesized notes and strictly validated summaries are permitted to enter the canonical concept ecosystem.  
+* **Division of Labor:** Deterministic scripts must handle all Document Object Model parsing, regular expressions, file routing, and API interactions. Language models are reserved exclusively for semantic chunking, entity extraction, and thematic summarization under human supervision.  
+* **Human Oversight:** The architectural imperative states that no note enters the canonical Zettelkasten without human review. Atomic notes must remain atomic; grouped context must remain bundled in specific Map of Content hub nodes.  
+* **Longevity:** Architectural choices that will survive the next decade rely entirely on open standards: plain text Markdown, strict YAML frontmatter, unique timestamped identifiers, and absolute local-first data ownership.
+
+By adhering to these rigorous architectural standards, an Obsidian vault ceases to be a mere repository of static text. It matures into a highly governed, drift-resistant persistent memory mesh—a durable cognitive environment where human creativity and artificial intelligence-driven computation can compound indefinitely.
+
+#### **Works cited**
+
+1. Obsidian \- Understanding its Core Design Principles \- Toolbox for Thought \- TftHacker, accessed March 24, 2026, [https://tfthacker.com/article-obsidian-core-design-principles](https://tfthacker.com/article-obsidian-core-design-principles)  
+2. Obsidian App: In-Depth Product Teardown | by Aditya Raj \- Medium, accessed March 24, 2026, [https://medium.com/design-bootcamp/obsidian-app-in-depth-product-teardown-6d685930a367](https://medium.com/design-bootcamp/obsidian-app-in-depth-product-teardown-6d685930a367)  
+3. Obsidian: Note-Taking & Knowledge Management \- Emergent Mind, accessed March 24, 2026, [https://www.emergentmind.com/topics/note-taking-tool-obsidian](https://www.emergentmind.com/topics/note-taking-tool-obsidian)  
+4. A Guide to Obsidian: Local, Markdown-Powered Networked Notes \- SitePoint, accessed March 24, 2026, [https://www.sitepoint.com/obsidian-beginner-guide/](https://www.sitepoint.com/obsidian-beginner-guide/)  
+5. Building Your AI-Powered Second Brain: How Claude Code \+ ..., accessed March 24, 2026, [https://medium.com/vibe-coding/building-your-ai-powered-second-brain-how-claude-code-obsidian-changed-everything-about-my-37dc3bdd199e](https://medium.com/vibe-coding/building-your-ai-powered-second-brain-how-claude-code-obsidian-changed-everything-about-my-37dc3bdd199e)  
+6. Obsidian Skills — Empowering AI Agents to Master Obsidian Knowledge Management | by Addo Zhang | Feb, 2026, accessed March 24, 2026, [https://addozhang.medium.com/obsidian-skills-empowering-ai-agents-to-master-obsidian-knowledge-management-8b4f6d844b34](https://addozhang.medium.com/obsidian-skills-empowering-ai-agents-to-master-obsidian-knowledge-management-8b4f6d844b34)  
+7. Day 14 of Claude Code: Obsidian as Your Dev Workflow \- YouTube, accessed March 24, 2026, [https://www.youtube.com/watch?v=Ov43HlN3V3M](https://www.youtube.com/watch?v=Ov43HlN3V3M)  
+8. Less is More: Why Use Retrieval Instead of Larger Context Windows | Pinecone, accessed March 24, 2026, [https://www.pinecone.io/blog/why-use-retrieval-instead-of-larger-context/](https://www.pinecone.io/blog/why-use-retrieval-instead-of-larger-context/)  
+9. My complete Obsidian workflow to manage my life \- Share & showcase, accessed March 24, 2026, [https://forum.obsidian.md/t/my-complete-obsidian-workflow-to-manage-my-life/64522](https://forum.obsidian.md/t/my-complete-obsidian-workflow-to-manage-my-life/64522)  
+10. What are the differences between PARA Second Brain and Zettelkasten as PKM? \- Reddit, accessed March 24, 2026, [https://www.reddit.com/r/Zettelkasten/comments/yqof3p/what\_are\_the\_differences\_between\_para\_second/](https://www.reddit.com/r/Zettelkasten/comments/yqof3p/what_are_the_differences_between_para_second/)  
+11. Remembering what you Read: Zettelkasten vs P.A.R.A. \- Zain Rizvi, accessed March 24, 2026, [https://www.zainrizvi.io/blog/remembering-what-you-read-zettelkasten-vs-para/](https://www.zainrizvi.io/blog/remembering-what-you-read-zettelkasten-vs-para/)  
+12. Zettelkasten \- Term and Definition, accessed March 24, 2026, [https://forum.zettelkasten.de/discussion/3193/zettelkasten-term-and-definition](https://forum.zettelkasten.de/discussion/3193/zettelkasten-term-and-definition)  
+13. LLM Selection and Vector Database Tuning: A Methodology for Enhancing RAG Systems, accessed March 24, 2026, [https://www.mdpi.com/2076-3417/15/20/10886](https://www.mdpi.com/2076-3417/15/20/10886)  
+14. I created a Zettelkasten note taking app with LLM-powered archiving \- Reddit, accessed March 24, 2026, [https://www.reddit.com/r/ChatGPTCoding/comments/1fgirrc/i\_created\_a\_zettelkasten\_note\_taking\_app\_with/](https://www.reddit.com/r/ChatGPTCoding/comments/1fgirrc/i_created_a_zettelkasten_note_taking_app_with/)  
+15. PARA vs Zettelkasten vs MOC \- YouTube, accessed March 24, 2026, [https://www.youtube.com/watch?v=zlQfHWDYuGI](https://www.youtube.com/watch?v=zlQfHWDYuGI)  
+16. Design your vault for AI orientation, not just human navigation ..., accessed March 24, 2026, [https://forum.obsidian.md/t/design-your-vault-for-ai-orientation-not-just-human-navigation/112010](https://forum.obsidian.md/t/design-your-vault-for-ai-orientation-not-just-human-navigation/112010)  
+17. Stop Losing Track of What You've Read: How to Use Evergreen Notes in Obsidian for Academic Research | by Yannan Su | Medium, accessed March 24, 2026, [https://medium.com/@yannansu/stop-losing-track-of-what-youve-read-how-to-use-evergreen-notes-in-obsidian-for-academic-research-4e185f5ac06a](https://medium.com/@yannansu/stop-losing-track-of-what-youve-read-how-to-use-evergreen-notes-in-obsidian-for-academic-research-4e185f5ac06a)  
+18. Evergreen Notes with AI in Obsidian (inspired by Andy Matuschak) \- YouTube, accessed March 24, 2026, [https://www.youtube.com/watch?v=Pz1zhCyAq0M](https://www.youtube.com/watch?v=Pz1zhCyAq0M)  
+19. Designing Vaults \- Knowledge management \- Obsidian Forum, accessed March 24, 2026, [https://forum.obsidian.md/t/designing-vaults/17435](https://forum.obsidian.md/t/designing-vaults/17435)  
+20. AI AGENT ARTICLE \- follow the idea \- Obsidian Publish, accessed March 24, 2026, [https://publish.obsidian.md/followtheidea/AI+AGENT+ARTICLE](https://publish.obsidian.md/followtheidea/AI+AGENT+ARTICLE)  
+21. I Gave My AI Agent a Three-Layer Memory. Here's How It Thinks Now. \- Towards AI, accessed March 24, 2026, [https://pub.towardsai.net/i-gave-my-ai-agent-a-three-layer-memory-obsidian-heres-how-it-thinks-now-0aaa0fdbdbbd](https://pub.towardsai.net/i-gave-my-ai-agent-a-three-layer-memory-obsidian-heres-how-it-thinks-now-0aaa0fdbdbbd)  
+22. awesome-mcp-servers/docs/knowledge-management--memory.md at main \- GitHub, accessed March 24, 2026, [https://github.com/TensorBlock/awesome-mcp-servers/blob/main/docs/knowledge-management--memory.md](https://github.com/TensorBlock/awesome-mcp-servers/blob/main/docs/knowledge-management--memory.md)  
+23. Chunking Strategies for LLM Applications \- Pinecone, accessed March 24, 2026, [https://www.pinecone.io/learn/chunking-strategies/](https://www.pinecone.io/learn/chunking-strategies/)  
+24. aaronsb/obsidian-mcp-plugin: High-performance Model ... \- GitHub, accessed March 24, 2026, [https://github.com/aaronsb/obsidian-mcp-plugin](https://github.com/aaronsb/obsidian-mcp-plugin)  
+25. Obsidian MCP servers: experiences and recommendations? \- Help, accessed March 24, 2026, [https://forum.obsidian.md/t/obsidian-mcp-servers-experiences-and-recommendations/99936](https://forum.obsidian.md/t/obsidian-mcp-servers-experiences-and-recommendations/99936)  
+26. I put Claude Code inside Obsidian, and it was awesome \- XDA Developers, accessed March 24, 2026, [https://www.xda-developers.com/claude-code-inside-obsidian-and-it-was-eye-opening/](https://www.xda-developers.com/claude-code-inside-obsidian-and-it-was-eye-opening/)  
+27. My perfect frontmatter in Obsidian : r/ObsidianMD \- Reddit, accessed March 24, 2026, [https://www.reddit.com/r/ObsidianMD/comments/1mn4q6g/my\_perfect\_frontmatter\_in\_obsidian/](https://www.reddit.com/r/ObsidianMD/comments/1mn4q6g/my_perfect_frontmatter_in_obsidian/)  
+28. Obsidian's YAML Metadata Feature is Underrated (With Examples) \- PARAZETTEL, accessed March 24, 2026, [https://parazettel.com/articles/obsidian-yaml-metadata/](https://parazettel.com/articles/obsidian-yaml-metadata/)  
+29. Tracking Daily Note Creation in Obsidian Workflow \- YouTube, accessed March 24, 2026, [https://www.youtube.com/watch?v=pW9Tzlz\_s5A](https://www.youtube.com/watch?v=pW9Tzlz_s5A)  
+30. Workflow for Automated Cleanup and Intake of notes to Obsidian : r ..., accessed March 24, 2026, [https://www.reddit.com/r/PKMS/comments/1qokb8v/workflow\_for\_automated\_cleanup\_and\_intake\_of/](https://www.reddit.com/r/PKMS/comments/1qokb8v/workflow_for_automated_cleanup_and_intake_of/)  
+31. diegomarzaa/pdf-ocr-obsidian: Convert your PDFs into ... \- GitHub, accessed March 24, 2026, [https://github.com/diegomarzaa/pdf-ocr-obsidian](https://github.com/diegomarzaa/pdf-ocr-obsidian)  
+32. parse PDF \- eriktuck \- Obsidian Publish, accessed March 24, 2026, [https://publish.obsidian.md/eriktuck/base/parse+PDF](https://publish.obsidian.md/eriktuck/base/parse+PDF)  
+33. Create Perfect Summaries of Video Transcripts with AI for free \- Obsidian Forum, accessed March 24, 2026, [https://forum.obsidian.md/t/create-perfect-summaries-of-video-transcripts-with-ai-for-free/96851](https://forum.obsidian.md/t/create-perfect-summaries-of-video-transcripts-with-ai-for-free/96851)  
+34. How I Use Obsidian \+ Claude Code to Run My Life \- YouTube, accessed March 24, 2026, [https://www.youtube.com/watch?v=6MBq1paspVU](https://www.youtube.com/watch?v=6MBq1paspVU)  
+35. How I Automated My Obsidian Workflow with Claude Code (slash commands \+ AI-powered linking) : r/ObsidianMD \- Reddit, accessed March 24, 2026, [https://www.reddit.com/r/ObsidianMD/comments/1on433j/how\_i\_automated\_my\_obsidian\_workflow\_with\_claude/](https://www.reddit.com/r/ObsidianMD/comments/1on433j/how_i_automated_my_obsidian_workflow_with_claude/)  
+36. Migrated 6,000+ Notes to Obsidian — Now I'm Drowning in Mess. Need Workflow Advice. : r/ObsidianMD \- Reddit, accessed March 24, 2026, [https://www.reddit.com/r/ObsidianMD/comments/1m6gh00/migrated\_6000\_notes\_to\_obsidian\_now\_im\_drowning/](https://www.reddit.com/r/ObsidianMD/comments/1m6gh00/migrated_6000_notes_to_obsidian_now_im_drowning/)  
+37. Managing hallucination risk in LLM deployments at the EY organization, accessed March 24, 2026, [https://www.ey.com/content/dam/ey-unified-site/ey-com/en-gl/technical/documents/ey-gl-managing-hallucination-risk-in-llm-deployments-01-26.pdf](https://www.ey.com/content/dam/ey-unified-site/ey-com/en-gl/technical/documents/ey-gl-managing-hallucination-risk-in-llm-deployments-01-26.pdf)  
+38. Hallucinations in LLMs: Technical challenges, systemic risks and AI governance implications | IAPP, accessed March 24, 2026, [https://iapp.org/news/a/hallucinations-in-llms-technical-challenges-systemic-risks-and-ai-governance-implications](https://iapp.org/news/a/hallucinations-in-llms-technical-challenges-systemic-risks-and-ai-governance-implications)  
+39. How I Use Obsidian : r/ObsidianMD \- Reddit, accessed March 24, 2026, [https://www.reddit.com/r/ObsidianMD/comments/1s2k6rz/how\_i\_use\_obsidian/](https://www.reddit.com/r/ObsidianMD/comments/1s2k6rz/how_i_use_obsidian/)  
+40. Obsidian Properties: Best Practices and Why? \- Knowledge management, accessed March 24, 2026, [https://forum.obsidian.md/t/obsidian-properties-best-practices-and-why/63891](https://forum.obsidian.md/t/obsidian-properties-best-practices-and-why/63891)  
+41. Stop Copy-Pasting Notes: Building an AI-Powered Pipeline from Obsidian to Anki, accessed March 24, 2026, [https://dev.to/vishwa\_p\_c4dc415de5/stop-copy-pasting-notes-building-an-ai-powered-pipeline-from-obsidian-to-anki-195f](https://dev.to/vishwa_p_c4dc415de5/stop-copy-pasting-notes-building-an-ai-powered-pipeline-from-obsidian-to-anki-195f)  
+42. How do you put YAML to use in your system? \- Obsidian Forum, accessed March 24, 2026, [https://forum.obsidian.md/t/how-do-you-put-yaml-to-use-in-your-system/18987](https://forum.obsidian.md/t/how-do-you-put-yaml-to-use-in-your-system/18987)  
+43. obsidian-yaml-frontmatter | Skills M... · LobeHub, accessed March 24, 2026, [https://lobehub.com/skills/jykim-ai4bm-obsidian-yaml-frontmatter/](https://lobehub.com/skills/jykim-ai4bm-obsidian-yaml-frontmatter/)  
+44. RAG Text Chunking Strategies: Optimize LLM Knowledge Access \- Towards AI, accessed March 24, 2026, [https://towardsai.net/p/machine-learning/rag-text-chunking-strategies-optimize-llm-knowledge-access](https://towardsai.net/p/machine-learning/rag-text-chunking-strategies-optimize-llm-knowledge-access)  
+45. Implement RAG chunking strategies with LangChain and watsonx.ai \- IBM, accessed March 24, 2026, [https://www.ibm.com/think/tutorials/chunking-strategies-for-rag-with-langchain-watsonx-ai](https://www.ibm.com/think/tutorials/chunking-strategies-for-rag-with-langchain-watsonx-ai)  
+46. Discussion: What to store in Provenance versus Audit Trail? \#11578 \- GitHub, accessed March 24, 2026, [https://github.com/DSpace/dspace/issues/11578](https://github.com/DSpace/dspace/issues/11578)  
+47. Nested YAML Frontmatter for Obsidian Book Notes \- BBBBlog, accessed March 24, 2026, [https://bbbburns.com/nested-yaml-frontmatter-for-obsidian-book-notes/](https://bbbburns.com/nested-yaml-frontmatter-for-obsidian-book-notes/)  
+48. \[New Plugin\] YAML Toolkit for Obsidian– Batch manipulate front matter with conditional rules, accessed March 24, 2026, [https://forum.obsidian.md/t/new-plugin-yaml-toolkit-for-obsidian-batch-manipulate-front-matter-with-conditional-rules/109674](https://forum.obsidian.md/t/new-plugin-yaml-toolkit-for-obsidian-batch-manipulate-front-matter-with-conditional-rules/109674)  
+49. accessed December 31, 1969, [https://forum.obsidian.md/t/new-plugin-yaml-toolkit-for-obsidian-batch-manipulate-front-matter-with-conditional-rules/109674/](https://forum.obsidian.md/t/new-plugin-yaml-toolkit-for-obsidian-batch-manipulate-front-matter-with-conditional-rules/109674/)  
+50. AI Vault Inspector for Obsidian (Full Demo) \- YouTube, accessed March 24, 2026, [https://www.youtube.com/watch?v=7bZsGyrwzIE](https://www.youtube.com/watch?v=7bZsGyrwzIE)  
+51. Obsidian AI Plugins vs Headless Agents: The Architecture Problem \- YouTube, accessed March 24, 2026, [https://www.youtube.com/watch?v=8bVlccuRUEQ](https://www.youtube.com/watch?v=8bVlccuRUEQ)  
+52. Rebuilding My Productivity Stack Around Obsidian \+ AI : r/ObsidianMD \- Reddit, accessed March 24, 2026, [https://www.reddit.com/r/ObsidianMD/comments/1p86svk/rebuilding\_my\_productivity\_stack\_around\_obsidian/](https://www.reddit.com/r/ObsidianMD/comments/1p86svk/rebuilding_my_productivity_stack_around_obsidian/)  
+53. Smart Plugins for Obsidian | Local-first AI tools starting with Smart ..., accessed March 24, 2026, [https://smartconnections.app/](https://smartconnections.app/)  
+54. Claude Code Inside Obsidian: The Setup That 10x'd My Thinking \- DEV Community, accessed March 24, 2026, [https://dev.to/numbpill3d/claude-code-inside-obsidian-the-setup-that-10xd-my-thinking-20e8](https://dev.to/numbpill3d/claude-code-inside-obsidian-the-setup-that-10xd-my-thinking-20e8)  
+55. Exporting your ChatGPT conversations to Obsidian \- Share & showcase, accessed March 24, 2026, [https://forum.obsidian.md/t/exporting-your-chatgpt-conversations-to-obsidian/104172](https://forum.obsidian.md/t/exporting-your-chatgpt-conversations-to-obsidian/104172)  
+56. Advanced Chunking/Retrieving Strategies for Legal Documents : r/Rag \- Reddit, accessed March 24, 2026, [https://www.reddit.com/r/Rag/comments/1jdi4sg/advanced\_chunkingretrieving\_strategies\_for\_legal/](https://www.reddit.com/r/Rag/comments/1jdi4sg/advanced_chunkingretrieving_strategies_for_legal/)
+
+---
+**Provenance**
+Source: [[source_document.md]]
+Processed: 2026-03-25T02:14:23.018343
+Granularity: Level 3

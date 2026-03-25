@@ -4,104 +4,79 @@ import uuid
 import logging
 from datetime import datetime
 from pathlib import Path
-from typing import Tuple
 
 logging.basicConfig(level=logging.INFO, format='%(levelname)s: %(message)s')
 
-def create_vault_structure(base_dir: Path) -> Tuple[Path, Path]:
-    sources_dir = base_dir / "02_Sources"
-    concepts_dir = base_dir / "03_Concepts"
-    
-    sources_dir.mkdir(parents=True, exist_ok=True)
-    concepts_dir.mkdir(parents=True, exist_ok=True)
-    
-    return sources_dir, concepts_dir
+def extract_metadata(text):
+    # Extract wiki-links for cross-referencing (Ref Section 4.2)
+    links = re.findall(r'\[\[(.*?)\]\]', text)
+    return list(set(links))
 
-def clean_filename(title: str) -> str:
-    cleaned = re.sub(r'[\\/*?:"<>|#]', "", title)
-    return cleaned.strip()
-
-def generate_frontmatter(title: str, source_filename: str) -> str:
+def generate_frontmatter(title, source_filename, links):
     timestamp_id = datetime.now().strftime("%Y%m%d%H%M%S")
-    unique_suffix = uuid.uuid4().hex[:4]
-    document_id = f"{timestamp_id}-{unique_suffix}"
+    unique_id = f"{timestamp_id}-{uuid.uuid4().hex[:4]}"
     
-    date_created = datetime.now().strftime("%Y-%m-%d")
+    # Format links for YAML (Ref Section 3.4)
+    out_links = "\n".join([f"  - \"[[{l}]]\"" for l in links])
+    link_section = f"\nrelated_concepts:\n{out_links}" if links else ""
     
-    frontmatter = f"""---
-id: {document_id}
-aliases: ["{title}"]
-type: concept
-status: "#processing"
-genesis: deterministic script
+    return f"""---
+id: {unique_id}
+title: "{title}"
+created: {datetime.now().strftime("%Y-%m-%d")}
+type: atomic-concept
+status: permanent
+source: "[[{source_filename}]]"{link_section}
 confidence: high
-sources: ["[[{source_filename}]]"]
-date_created: {date_created}
+author: agentic-pipeline-v3
+tags: [assimilated, granular-memory, legal-standard]
 ---
 """
-    return frontmatter
 
-def chunk_markdown_document(input_filepath: Path, sources_dir: Path, concepts_dir: Path) -> None:
-    if not input_filepath.exists():
-        logging.error(f"Could not find {input_filepath}. Please ensure the file exists.")
-        return
-
-    source_filename = input_filepath.name
-    source_destination = sources_dir / source_filename
+def process_vault():
+    base_dir = Path.cwd()
+    input_file = base_dir / "source_document.md"
+    concepts_dir = base_dir / "03_Concepts"
+    sources_dir = base_dir / "02_Sources"
     
-    try:
-        shutil.copy2(input_filepath, source_destination)
-        logging.info(f"Copied immutable source to: {source_destination}")
-    except IOError as e:
-        logging.error(f"Failed to copy source file: {e}")
-        return
+    for d in [concepts_dir, sources_dir]: d.mkdir(exist_ok=True)
+    if not input_file.exists(): return
 
-    try:
-        with open(input_filepath, 'r', encoding='utf-8') as file:
-            content = file.read()
-    except IOError as e:
-        logging.error(f"Failed to read source file: {e}")
-        return
+    shutil.copy2(input_file, sources_dir / input_file.name)
 
-    chunks = re.split(r'\n(?=## )', content)
+    with open(input_file, 'r') as f:
+        content = f.read()
 
-    for index, chunk in enumerate(chunks):
-        chunk = chunk.strip()
-        if not chunk:
-            continue
-
-        lines = chunk.split('\n')
-        first_line = lines[0].strip()
+    # Maximum Granularity: Split at any header level (Ref Section 8.2)
+    chunks = re.split(r'\n(?=#{1,3} )', content)
+    
+    for i, chunk in enumerate(chunks):
+        lines = chunk.strip().split('\n')
+        if not lines: continue
         
-        if first_line.startswith('## '):
-            title = first_line[3:].strip()
-            body = '\n'.join(lines[1:]).strip()
-        elif first_line.startswith('# '):
-            title = first_line[2:].strip()
+        # Clean Title and Level (Ref Section 3.3)
+        header_match = re.match(r'^(#{1,3}) (.*)', lines[0])
+        if header_match:
+            level = len(header_match.group(1))
+            title = header_match.group(2).strip()
             body = '\n'.join(lines[1:]).strip()
         else:
-            title = f"Extracted Section {index + 1}"
+            level = 4
+            title = f"Data Fragment {i}"
             body = chunk
 
-        semantic_filename = f"{clean_filename(title)}.md"
-        output_filepath = concepts_dir / semantic_filename
+        links = extract_metadata(body)
+        filename = f"{re.sub(r'[\\/*?:\u0022<>|]', '', title)[:50]}.md"
         
-        frontmatter = generate_frontmatter(title, source_filename)
-        final_content = f"{frontmatter}\n# {title}\n\n{body}\n"
+        frontmatter = generate_frontmatter(title, input_file.name, links)
         
-        try:
-            with open(output_filepath, 'w', encoding='utf-8') as out_file:
-                out_file.write(final_content)
-            logging.info(f"Generated atomic note: {semantic_filename}")
-        except IOError as e:
-            logging.error(f"Failed to write atomic note {semantic_filename}: {e}")
+        # Strict Provenance Block (Ref Section 6.4)
+        provenance = f"\n\n---\n**Provenance**\nSource: [[{input_file.name}]]\nProcessed: {datetime.now().isoformat()}\nGranularity: Level {level}"
+        
+        with open(concepts_dir / filename, 'w') as out:
+            out.write(f"{frontmatter}\n# {title}\n\n{body}{provenance}")
+            
+    logging.info(f"Metabolism complete. Generated {len(chunks)} hyper-granular nodes.")
 
 if __name__ == "__main__":
-    current_directory = Path.cwd()
-    target_input_file = current_directory / "source_document.md"
-    
-    dir_02, dir_03 = create_vault_structure(current_directory)
-    
-    logging.info("Initiating deterministic markdown-aware chunking...")
-    chunk_markdown_document(target_input_file, dir_02, dir_03)
-    logging.info("Assimilation pipeline complete.")
+    process_vault()
